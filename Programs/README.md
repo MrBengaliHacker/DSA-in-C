@@ -1,4 +1,4 @@
-## 📋Program 1: Linked List of Students with Insertion
+## 📋Program 7: Linked List of Students with Insertion
 
 **Question**: Write a program to create a single linked list of students (Name, Roll, Percentage) and perform insertion of a new student at the i-th position along with displaying the list. 
 
@@ -97,6 +97,7 @@ void insert()
 }
 int main()
 {
+  getch();
   int n, choice, i;
 
   printf("Enter total number of students: ");
@@ -125,6 +126,7 @@ int main()
       printf("Invalid input!!!\n");
     }
   }
+  getch();
   return 0;
 }
 ```
@@ -229,4 +231,88 @@ Enter 2 to display
 Enter 3 to insert
 Enter 4 to exit
 Enter your choice: 4 
+```
+## 📋Program 8: Selection Sort
+
+**Question**: Write a program in c to implement selection sort.
+
+**Solution**: [View Code](Program_8.c)
+
+```c
+#include <stdio.h>
+#include <conio.h>
+
+void selectionSort(int arr[], int n)
+{
+    int i, j, temp, min;
+
+    for (i = 0; i < n - 1; i++)
+    {
+        min = i;
+        for (j = i + 1; j < n; j++)
+        {
+            if (arr[j] < arr[min])
+            {
+                min = j;
+            }
+        }
+        // Swap after inner loop
+        if (min != i)
+        {
+            temp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = temp;
+        }
+    }
+}
+
+void printArray(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+}
+
+int main()
+{
+    clrscr();
+    int arr[50], n, i;
+
+    printf("Enter The Number Of Elements: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter Element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+
+    printf("\nEntered Array:\n");
+    printArray(arr, n);
+
+    selectionSort(arr, n);
+
+    printf("\nSorted Array:\n");
+    printArray(arr, n);
+
+    getch();
+    return 0;
+}
+```
+### OUTPUT
+
+```
+Enter The Number Of Elements: 5
+Enter Element 1: 44
+Enter Element 2: 12
+Enter Element 3: 69
+Enter Element 4: 16
+Enter Element 5: 20
+
+Entered Array: 
+44 12 69 16 20 
+
+Sorted Array:
+12 16 20 44 69
 ```
