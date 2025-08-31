@@ -1,4 +1,4 @@
-## 📋Program 1: Linked List of Students with Insertion
+## 📋Program 7: Linked List of Students with Insertion
 
 **Question**: Write a program to create a single linked list of students (Name, Roll, Percentage) and perform insertion of a new student at the i-th position along with displaying the list. 
 
