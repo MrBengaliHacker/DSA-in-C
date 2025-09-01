@@ -97,7 +97,7 @@ void insert()
 }
 int main()
 {
-  getch();
+  clrscr();
   int n, choice, i;
 
   printf("Enter total number of students: ");
