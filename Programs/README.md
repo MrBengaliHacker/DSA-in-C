@@ -1,4 +1,4 @@
-## 📋Program 6: Singly Linked List
+## 📋Program 5: Singly Linked List
 
 **Question**: Create a linked list with each node(student) contan name, roll, percentage of marks.
 
